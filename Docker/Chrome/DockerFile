@@ -17,7 +17,7 @@ CMD PowerShell.exe
 #
 # Install Chrome
 #
-ADD https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win_x64/737173/chrome-win.zip?generation=1580439619624464&alt=media /
+ADD https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win_x64%2F737173%2Fchrome-win.zip?generation=1580439619624464&alt=media /
 
 RUN Expand-Archive -Path '/chrome-win.zip'                                                  \
                    -DestinationPath '/Program Files (x86)/Google/Chrome/Application'      ; \
