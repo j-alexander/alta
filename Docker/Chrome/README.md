@@ -2,9 +2,10 @@
 https://omahaproxy.appspot.com/
 
 1. use Position Lookup (under Tools)
-# to obtain the Branch Base Position
 
-![Omaha Proxy Version Selection](omahaproxy-version-selection.png)
+   # to obtain the Branch Base Position
+
+   ![Omaha Proxy Version Selection](omahaproxy-version-selection.png)
 
 1. obtain the corresponding Win_x64 versions (e.g. 81.0.4044.138 -> 737173)
 https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html
