@@ -1,0 +1,34 @@
+#
+# Use winver to check whether your OS is >= 1909
+# If not, use the appropriate version
+#
+FROM mcr.microsoft.com/windows:1909
+
+
+
+#
+# Configure Powershell as the Default Shell
+#
+SHELL ["PowerShell", "-NoProfile", "-Command", "$ErrorActionPreference = 'Stop';"]
+CMD PowerShell.exe
+
+
+
+#
+# Install Chrome
+#
+ADD https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win_x64/737173/chrome-win.zip?generation=1580439619624464&alt=media /
+
+RUN Expand-Archive -Path '/chrome-win.zip'                                                  \
+                   -DestinationPath '/Program Files (x86)/Google/Chrome/Application'      ; \
+    Remove-Item -Force '/chrome-win.zip'
+
+
+#
+# Install ChromeDriver
+#
+ADD https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win_x64%2F737173%2Fchromedriver_win32.zip?generation=1580439625877582&alt=media /
+
+RUN Expand-Archive -Path '/chromedriver_win32.zip'                                          \
+                   -DestinationPath '/Program Files (x86)/Google/Chrome/Application'      ; \
+    Remove-Item -Force '/chromedriver_win32.zip'

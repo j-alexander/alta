@@ -4,6 +4,8 @@
 #
 FROM mcr.microsoft.com/windows:1909
 
+
+
 #
 # Configure Powershell as the Default Shell
 #
