@@ -13,6 +13,7 @@ SHELL ["PowerShell", "-NoProfile", "-Command", "$ErrorActionPreference = 'Stop';
 CMD PowerShell.exe
 
 
+
 #
 # Install Firefox
 #
@@ -20,10 +21,10 @@ ADD https://ftp.mozilla.org/pub/firefox/releases/76.0.1/win64/en-US/Firefox%20Se
 
 RUN Write-Host "Installing may take some time..."                 ; \
     Start-Process -FilePath '\Firefox Setup 76.0.1.exe'             \
-        -ArgumentList '/S'                                          \
-        -Wait                                                     ; \
+                  -ArgumentList '/S'                                \
+                  -Wait                                           ; \
     SetX /M MOZ_HEADLESS 1                                        ; \
-    Remove-Item -Force '\Firefox Setup 76.0.1.exe'
+    Remove-Item '/Firefox Setup 76.0.1.exe'
 
 
 
@@ -32,7 +33,7 @@ RUN Write-Host "Installing may take some time..."                 ; \
 #
 ADD https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-win64.zip /
 
-RUN Expand-Archive -Path 'geckodriver-v0.26.0-win64.zip'            \
+RUN Expand-Archive -Path '/geckodriver-v0.26.0-win64.zip'           \
                    -DestinationPath /                             ; \
     Move-Item /geckodriver.exe '/Program Files/Mozilla Firefox'   ; \
-    Remove-Item -Force -Recurse '/geckodriver-v0.26.0-win64.zip'  ; \
+    Remove-Item '/geckodriver-v0.26.0-win64.zip'

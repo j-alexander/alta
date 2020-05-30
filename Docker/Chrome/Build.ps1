@@ -1,1 +1,1 @@
-docker build --tag alta/chrome .\
+docker build --tag windows/chrome:737173 .\

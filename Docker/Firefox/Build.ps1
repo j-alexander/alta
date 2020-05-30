@@ -1,1 +1,1 @@
-docker build --tag alta/firefox .\
+docker build --tag windows/firefox:76.0.1 .\

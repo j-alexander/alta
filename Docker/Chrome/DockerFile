@@ -19,9 +19,15 @@ CMD PowerShell.exe
 #
 ADD https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win_x64%2F737173%2Fchrome-win.zip?generation=1580439619624464&alt=media /
 
-RUN Expand-Archive -Path '/chrome-win.zip'                                                  \
-                   -DestinationPath '/Program Files (x86)/Google/Chrome/Application'      ; \
-    Remove-Item -Force '/chrome-win.zip'
+RUN Expand-Archive -Path '/chrome-win.zip'                                                   \
+                   -DestinationPath '/'                                                    ; \
+    New-Item       -Path '/Program Files (x86)/Google/Chrome/Application'                    \
+                   -ItemType Directory                                                     ; \
+    Get-ChildItem  -Path '/chrome-win' |                                                     \
+    Move-Item      -Destination '/Program Files (x86)/Google/Chrome/Application'           ; \
+    Remove-Item    -Path '/chrome-win'                                                     ; \
+    Remove-Item    -Path '/chrome-win.zip'
+
 
 
 #
@@ -29,6 +35,9 @@ RUN Expand-Archive -Path '/chrome-win.zip'                                      
 #
 ADD https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win_x64%2F737173%2Fchromedriver_win32.zip?generation=1580439625877582&alt=media /
 
-RUN Expand-Archive -Path '/chromedriver_win32.zip'                                          \
-                   -DestinationPath '/Program Files (x86)/Google/Chrome/Application'      ; \
-    Remove-Item -Force '/chromedriver_win32.zip'
+RUN Expand-Archive -Path '/chromedriver_win32.zip'                                           \
+                   -DestinationPath '/'                                                    ; \
+    Get-ChildItem  -Path '/chromedriver_win32' |                                             \
+    Move-Item      -Destination '/Program Files (x86)/Google/Chrome/Application'           ; \
+    Remove-Item    -Path '/chromedriver_win32'                                             ; \
+    Remove-Item    -Path '/chromedriver_win32.zip'
