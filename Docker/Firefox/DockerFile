@@ -1,0 +1,36 @@
+#
+# Use winver to check whether your OS is >= 1909
+# If not, use the appropriate version
+#
+FROM mcr.microsoft.com/windows:1909
+
+#
+# Configure Powershell as the Default Shell
+#
+SHELL ["PowerShell", "-NoProfile", "-Command", "$ErrorActionPreference = 'Stop';"]
+CMD PowerShell.exe
+
+
+#
+# Install Firefox
+#
+ADD https://ftp.mozilla.org/pub/firefox/releases/76.0.1/win64/en-US/Firefox%20Setup%2076.0.1.exe /
+
+RUN Write-Host "Installing may take some time..."                 ; \
+    Start-Process -FilePath '\Firefox Setup 76.0.1.exe'             \
+        -ArgumentList '/S'                                          \
+        -Wait                                                     ; \
+    SetX /M MOZ_HEADLESS 1                                        ; \
+    Remove-Item -Force '\Firefox Setup 76.0.1.exe'
+
+
+
+#
+# Install GeckoDriver
+#
+ADD https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-win64.zip /
+
+RUN Expand-Archive -Path 'geckodriver-v0.26.0-win64.zip'            \
+                   -DestinationPath /                             ; \
+    Move-Item /geckodriver.exe '/Program Files/Mozilla Firefox'   ; \
+    Remove-Item -Force -Recurse '/geckodriver-v0.26.0-win64.zip'  ; \
