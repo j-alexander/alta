@@ -1,0 +1,15 @@
+#
+# Alta for Chrome (see /Docker/Chrome/DockerFile)
+#
+FROM windows/chrome:737173 as chrome
+ADD ./win-x64 /Alta
+CMD Set-Location /Alta; ./Alta.exe chrome
+
+
+
+#
+# Alta for Firefox (see /Docker/Firefox/DockerFile)
+#
+FROM windows/firefox:76.0.1 as firefox
+ADD ./win-x64 /Alta
+CMD Set-Location /Alta; ./Alta.exe firefox

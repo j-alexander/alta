@@ -1,0 +1,1 @@
+docker run --ip6 true --rm -it alta/firefox

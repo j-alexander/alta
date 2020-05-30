@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Alta", "Alta\Alta.fsproj", "{BE216E93-CA32-4EB6-BEA3-2E0D98C2EF07}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE216E93-CA32-4EB6-BEA3-2E0D98C2EF07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE216E93-CA32-4EB6-BEA3-2E0D98C2EF07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE216E93-CA32-4EB6-BEA3-2E0D98C2EF07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE216E93-CA32-4EB6-BEA3-2E0D98C2EF07}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC8086C2-D0B6-4CAE-A817-18C1E5C02879}
+	EndGlobalSection
+EndGlobal
