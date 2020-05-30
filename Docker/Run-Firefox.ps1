@@ -1,1 +1,1 @@
-docker run --ip6 true --rm -it alta/firefox
+docker run --isolation=hyperv --rm -it alta/firefox

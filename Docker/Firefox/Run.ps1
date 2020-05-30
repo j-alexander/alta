@@ -1,1 +1,1 @@
-docker run --rm -it windows/firefox:76.0.1
+docker run --isolation=hyperv --rm -it windows/firefox:58.0.2

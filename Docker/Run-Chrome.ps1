@@ -1,1 +1,1 @@
-docker run --rm -it alta/chrome
+docker run --isolation=hyperv --rm -it alta/chrome
