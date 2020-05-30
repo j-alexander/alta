@@ -1,5 +1,5 @@
 #
-# Use winver to check whether your OS is >= 1909
+# Use winver to check whether your Windows Host OS is >= 1909
 # If not, use the appropriate version
 #
 FROM mcr.microsoft.com/windows:1909
