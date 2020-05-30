@@ -1,1 +1,1 @@
-docker build --tag windows/firefox:76.0.1 .\
+docker build --tag windows/firefox:58.0.2 .\

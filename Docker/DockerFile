@@ -10,6 +10,6 @@ CMD Set-Location /Alta; ./Alta.exe chrome
 #
 # Alta for Firefox (see /Docker/Firefox/DockerFile)
 #
-FROM windows/firefox:76.0.1 as firefox
+FROM windows/firefox:58.0.2 as firefox
 ADD ./win-x64 /Alta
 CMD Set-Location /Alta; ./Alta.exe firefox
