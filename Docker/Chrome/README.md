@@ -17,4 +17,4 @@ https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Wi
 
    1. update [DockerFile](DockerFile) using the links above
 
-   1. update [Build.ps1](Build.ps1) to reflect your chosen version (e.g. 737173)
+   1. update [Build.ps1](Build.ps1) to tag your chosen version (e.g. 737173), if desired

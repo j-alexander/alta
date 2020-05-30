@@ -1,1 +1,1 @@
-docker build --tag chrome .\
+docker build --tag alta/chrome .\

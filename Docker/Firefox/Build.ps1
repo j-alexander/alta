@@ -1,1 +1,1 @@
-docker build --tag firefox .\
+docker build --tag alta/firefox .\
