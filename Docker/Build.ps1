@@ -1,3 +1,9 @@
+dotnet tool restore                            `
+	--configfile                               `
+    ../.config/dotnet-tools.json
+dotnet paket restore                           `
+	--project                                  `
+    ../Alta/Alta.fsproj
 dotnet publish                                 `
     --configuration Release                    `
     --self-contained                           `
