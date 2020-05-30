@@ -1,1 +1,1 @@
-docker build --tag windows/chrome:737173 .\
+docker build --isolation=hyperv --tag windows/chrome:737173 .\

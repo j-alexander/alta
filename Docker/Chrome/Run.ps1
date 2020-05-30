@@ -1,1 +1,1 @@
-docker run --rm -it windows/chrome:737173
+docker run --isolation=hyperv --rm -it windows/chrome:737173

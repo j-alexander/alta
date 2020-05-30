@@ -1,1 +1,1 @@
-docker build --tag windows/firefox:58.0.2 .\
+docker build --isolation=hyperv --tag windows/firefox:58.0.2 .\
